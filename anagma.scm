@@ -147,13 +147,21 @@
   (newline)
   (reset-enigma))
 
+;; (define (enigma-loop)
+;;   (display "anagma> ")
+;;   (input-string (read-line))
+;;   (enigma-loop))
+
 (define (enigma-loop)
   (display "anagma> ")
-  (input-string (read-line))
+  (let ((str (read-line)))
+    (if (eof-object? str)
+        (exit 0)
+        (input-string str)))
   (enigma-loop))
 
 (define (usage)
-  (printf "anagma, version 1.1\n")
+  (printf "anagma, version 1.2\n")
   (printf "usage: anagma [OPTION ...] [FILENAME | STRING]\n")
   (printf "-e, --exec string  : string passed in\n")
   (printf "-f, --file file    : filename passed in\n")

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+
+</head>
+
+<body>
+
+<h1>ANAGMA</h1>
+
+<p>enigmaのシミュレータです <br />
+chicken-schemeを使ってます <br />
+cscでコンパイルしてください  </p>
+
+<h2>Usage</h2>
+
+<p><code>bash
+    anagma [OPTION ...] [FILENAME | STRING] <br />
+    -e, --exec string  : string passed in <br />
+    -f, --file file    : filename passed in <br />
+    -h, --help         : print this help message <br />
+    -k, --keys keys    : keys is init string of 3 rotors <br />
+    -r, --repl         : start anagma repl <br />
+    -v, --version      : print the anagma version
+</code></p>
+
+<h3>example</h3>
+
+<p><code>anagma -k "0 0 0" -e "hello world"</code> => <code>MTWPZPRWHB</code> <br />
+<code>anagma -k "0 0 0" -e "MTWPZPRWHB"</code> => <code>HELLOWORLD</code> <br />
+-kオプションが取る3つの数字はANAGMA仮想ローターの初期位置を決めます. <br />
+-eオプションを</p>
+
+</body>
+</html>
